@@ -16,12 +16,12 @@ module load slurm
 module load gcc/10.2.0
 
 i=0
-for ((x=10; x<=10; x+=1))
+for ((x=1000000; x<=10000000; x+=1000000));
 do
     # run the job with some outputs
     ((i++))
     echo "running experiment $i"
-    ./ComputePi $X
+    ./ComputePi $x
     echo "-----------------------------------------"
 done
 
