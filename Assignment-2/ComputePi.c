@@ -15,6 +15,10 @@
 
 int main(int argc, char *argv[]) {
     // take n from command line input
+    if (argc != 2) {
+        printf("Usage: %s <n>\n", argv[0]);
+        return 1;
+    }
     int n = atoi(argv[1]);
     double pi = compute_pi(n);
     printf("Estimate of pi is %f\n", pi);
